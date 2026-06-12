@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.timers" name="Timers" version="4.1.2" provider-name="Heckie">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="addon.py" />                                                                               
+  <extension point="xbmc.python.script" library="script.py" />
+  <extension point="kodi.context.item">
+    <menu id="kodi.core.main">
+      <item library="context_setsleep.py">
+        <label>32004</label>
+        <visible>true</visible>
+      </item>
+      <item library="context_setsnooze.py">
+        <label>32005</label>
+        <visible>true</visible>
+      </item>
+      <item library="context_settimer.py">
+        <label>32000</label>
+        <visible>true</visible>
+      </item>
+      <item library="context_setquickepgtimer.py">
+        <label>32117</label>
+        <visible>Window.IsVisible(tvguide)|Window.IsVisible(radioguide)</visible>
+      </item>
+    </menu>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Timers</summary>
+    <summary lang="de_DE">Timers</summary>
+    <description lang="en_GB">A powerful timer addon with the following features
+* Unlimited timer slots. All of them can be quickly set up by using context menu
+* single-click-setup for sleep and doze timers
+* Timers can play any resource that it available in KODI, e.g. music folders, video files, TV/radio programs, slideshows, resources from 3rd party plugins, e.g. Zattoo channels.
+* Timers can be set from TV / Radio EPG, One-click-setup from epg (Quick Timer)
+* Different schedule modes: once, everyday, Mon-Fri, Fri-Sat, Sat-Sun, Sun-Thu, Mon-Thu, specific weekday and many more
+* Date change is supported, e.g. from 23:30 (p.m.) until 1:30 (a.m.)
+* Shuffle, repeat, 2 end modes, i.e. duration or specific time
+* Smart shuffle mode for slideshows that tries to find folder that fits into timeframe randomly
+* Actions related to media: start media and stop at end, just start media, start media at end, stop media immediately, stop media at end, power down system
+* Linear fading in timer period: fade-in, fade-out, no fading. Min and max volume can be set for each timer
+* Custom label for timer
+* After KODI startup timers, that are in period, start retroactively although KODI was not running at start time. Fading volume is calculated correctly.
+* Feature in order to prevent that display is turned off if KODI idles but is not in full screen mode
+* MS Windows only: Feature in order to prevent that Windows displays lock screen if KODI idles
+    </description>
+    <description lang="de_DE">Timer Addon mit folgenden Funktionen
+* Unbegrenzte Anzahl an Timer, die eingestellt werden können. Alle Timer können über das Kontextmenü geöffnet werden
+* Timer für "Einschlaf"- und "Schlummer"-Timer mit nur einem Klick 
+* Timer können alle Medien starten, die in Kodi sind wie Musik, Video, TV/Radio programme, Diashows, andere Addons, z.B. Zattoo. 
+* Einstellung mit nur einem Klick aus EPG (Quick Timer)
+* Beliebige Zeitplanungen möglich: einmalig, pro Wochentag, Mo-Fr, Fr-Sa, Sa-So, So-Do, Mo-Do, ...
+* Tageswechsel wird unterstützt, z.B. Timer von 23:30 bis 1:30 am nächsten Tag
+* Dauer kann über Zeitraum oder Zeitpunkt eingestellt werden
+* Aktionen mit Medien: starte Wiedergabe und beende diese nach Ablauf, starte Wiedergabe, starte Wiedergabe bei Ablauf, stoppe Wiedergabe sofort, stoppe Wiedergabe nach Ablauf, fahre System herunter
+* Lautstärke während der Laufzeit ein-/ausblenden. Einstellung pro Timer mit max. und minimaler Lautstärke
+* Beschriftung der Timer
+* Nachdem Kodi startet, werden aktive Timer ebenfalls gestartet.
+* Feature um Kodi darin zu hindern den Bildschirm abzuschalten, wenn Kodi nicht im Vollbildmodus ist
+* MS Windows: Feature um Windows daran zu hindern in den Sperrbildschirm zu schalten, während Kodi keine Medien abspielt 
+    </description>
+    <language>en</language>
+    <language>de</language>
+    <platform>all</platform>
+    <license>MIT</license>
+    <website>https://github.com/Heckie75/kodi-addon-timers</website>
+    <source>https://github.com/Heckie75/kodi-addon-timers</source>
+    <news>
+v4.1.2 (2025-04-27)
+* Fixed issue #50: Predefined time in sleep timer is incorrect (prob. if no PVR client is installed)
+
+v4.1.1 (2025-03-24)
+* Minor fixes for Python compatibility
+
+v4.1.0 (2024-12-19)
+* New feature: support for smart playlists (music and video)
+
+v4.0.2 (2024-12-12)
+* Bugfix: Fix exception when settings timer in EPG with program that runs over midnight
+
+v4.0.1 (2024-12-08)
+- Addded translations for French (provided by Skypichat-kodi and Gemini)
+- Bugfix: Prevent exception when turning off timers by deselecting all days of week
+
+v4.0.0 (2024-08-31)
+- New feature: programming timers with full date (not only day within upcoming 7 days, feature request #34)
+- Improved stop behavior of overlapping media timers acc. its priority
+- Bugfix / workaround: [Kodi v21] Settings dialog is broken, issue #43
+- Bugfix: [Kodi v21] Addon can't play PVR items anymore, issue #42
+
+v3.9.3 (2024-08-02)
+- Bugfix: Fixed that 'running-high-prio-fading-only-timer' prevents starting other media timers within its period
+
+v3.9.2 (2024-07-21)
+- Bugfix: The repeat flag in Timer Addon doesn't work, issue #39
+
+v3.9.1 (2024-06-30)
+- Bugfix: Prevent exception after changing already running non-fading-timer to fading-timer
+
+v3.9.0 (2023-11-11)
+- Added new system action 'restart Kodi'
+- Added new extra feature to prevent display off when audio is playing
+- Bugfix: Prevent exception in fader context
+
+Complete changelog see https://github.com/Heckie75/kodi-addon-timers
+    </news>
+    <assets>
+      <icon>resources/assets/icon.png</icon>
+      <fanart>resources/assets/fanart.png</fanart>
+      <screenshot>resources/assets/screenshot_01.png</screenshot>
+      <screenshot>resources/assets/screenshot_02.png</screenshot>
+      <screenshot>resources/assets/screenshot_03.png</screenshot>
+      <screenshot>resources/assets/screenshot_04.png</screenshot>
+      <screenshot>resources/assets/screenshot_05.png</screenshot>
+      <screenshot>resources/assets/screenshot_06.png</screenshot>
+      <screenshot>resources/assets/screenshot_07.png</screenshot>
+      <screenshot>resources/assets/screenshot_08.png</screenshot>
+      <screenshot>resources/assets/screenshot_09.png</screenshot>
+      <screenshot>resources/assets/screenshot_10.png</screenshot>
+    </assets>
+  </extension>
+</addon>

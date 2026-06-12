@@ -1,0 +1,126 @@
+# Kodi Media Center language file
+# Addon Name: Kodi Windows Installer
+# Addon id: script.kodi.windows.update
+# Addon Provider: Lunatixz
+msgid ""
+msgstr ""
+"Project-Id-Version: script.kodi.windows.update\n"
+"Report-Msgid-Bugs-To: translations@kodi.tv\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2021-10-26 18:46+0000\n"
+"Last-Translator: Christian Gade <gade@kodi.tv>\n"
+"Language-Team: Danish <https://kodi.weblate.cloud/projects/kodi-add-ons-scripts/script-kodi-windows-update/da_dk/>\n"
+"Language: da_dk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.8\n"
+
+msgctxt "Addon Summary"
+msgid "Download and Install Kodi packages."
+msgstr "Hent og installer Kodi-installationspakker."
+
+msgctxt "Addon Description"
+msgid "Download and Install Kodi window executables; select from  Nightlies, Releases, Snapshots and Test-builds."
+msgstr "Download og installer Windows eksekverbare filer til Kodi; vælg fra Nightlies, Udgivelser, Snapshots og Test-builds."
+
+msgctxt "Addon Disclaimer"
+msgid "UWP not supported! Not intended for Kodi installation through the Windows Store."
+msgstr "UWP understøttes ikke! Ikke beregnet til Kodi-installation gennem Windows Store."
+
+msgctxt "#30000"
+msgid "Enable Debugging [Log errors]"
+msgstr "Aktiver fejfinding (logfør fejl)"
+
+msgctxt "#30001"
+msgid "Something went wrong, Try again later..."
+msgstr "Noget gik galt. Prøv igen senere..."
+
+msgctxt "#30002"
+msgid "Downloading..."
+msgstr "Henter..."
+
+msgctxt "#30003"
+msgid "Keep all downloads?"
+msgstr "Behold alle downloads?"
+
+msgctxt "#30004"
+msgid "File already exists"
+msgstr "Filen eksisterer allerede"
+
+msgctxt "#30005"
+msgid "Install"
+msgstr "Installer"
+
+msgctxt "#30006"
+msgid "Redownload"
+msgstr "Hent igen"
+
+msgctxt "#30007"
+msgid "Installation Complete, File Removed"
+msgstr "Installation fuldført, fil fjernet"
+
+msgctxt "#30008"
+msgid "Cleanup download after installation"
+msgstr "Fjern download efter installation"
+
+msgctxt "#30009"
+msgid "UWP Installations Not Supported!"
+msgstr "UWP-installationer understøttes ikke!"
+
+msgctxt "#30010"
+msgid "/../../Users/*/AppData/Local/Packages/XBMCFoundation.Kodi_*"
+msgstr "/../../Users/*/AppData/Local/Packages/XBMCFoundation.Kodi_*"
+
+msgctxt "#30011"
+msgid "Plugin disabled"
+msgstr "Plugin deaktiveret"
+
+msgctxt "#30012"
+msgid "Would you like to disable this plugin?"
+msgstr "Vil du deaktivere dette plugin?"
+
+msgctxt "#30014"
+msgid "Current Windows Platform (%s)"
+msgstr "Aktuel Windows-platform (%s)"
+
+msgctxt "#30015"
+msgid "Semi-stable (Monthly builds)."
+msgstr "Halvstabil (månedlige builds)."
+
+msgctxt "#30016"
+msgid "Stable (Final releases)."
+msgstr "Stabil (endelige udgivelser)."
+
+msgctxt "#30017"
+msgid "Unstable (Daily builds)."
+msgstr "Ustabil (daglige builds)."
+
+msgctxt "#30018"
+msgid "Experimental (Debugging builds)."
+msgstr "Eksperimentel (fejlsøgnings-builds)."
+
+msgctxt "#30019"
+msgid "Incompatible platform"
+msgstr "Inkompatibel platform"
+
+msgctxt "#30020"
+msgid "Enable Silent Installation"
+msgstr "Aktiver lydløs installation"
+
+msgctxt "#30021"
+msgid "Current Kodi Branch (%s.%s-%s)"
+msgstr "Nuværende Kodi branch (%s.%s-%s)"
+
+msgctxt "#30023"
+msgid "[B]Downloading:[/B]"
+msgstr "[B]Henter:[/B]"
+
+msgctxt "#30024"
+msgid " | [B]Speed:[/B]"
+msgstr " | [B]Hastighed:[/B]"
+
+msgctxt "#30025"
+msgid " | [B]ETA:[/B]"
+msgstr " | [B]ETA:[/B]"

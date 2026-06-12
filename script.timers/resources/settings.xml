@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings version="1">
+  <section id="script.timers">
+    <category id="c_timer" label="32256" help="">
+      <group id="g_edit_timer" label="32255">
+        <setting id="edit_timer" type="action" label="32251" help="32381">
+          <level>0</level>
+          <data>RunScript($ID,edit)</data>
+          <control type="button" format="action">
+            <close>false</close>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="is">-1</dependency>
+          </dependencies>
+        </setting>
+        <setting id="add_new_timer" type="action" label="32250" help="32380">
+          <level>0</level>
+          <data>RunScript($ID,add)</data>
+          <control type="button" format="action">
+            <close>false</close>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="is">-1</dependency>
+          </dependencies>
+        </setting>
+        <setting id="delete_timer" type="action" label="32252" help="32382">
+          <level>0</level>
+          <data>RunScript($ID,delete)</data>
+          <control type="button" format="action">
+            <close>true</close>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="is">-1</dependency>
+          </dependencies>
+        </setting>
+        <setting id="save_timer" type="action" label="32253" help="32301">
+          <level>0</level>
+          <data>RunScript($ID,save)</data>
+          <control type="button" format="action">
+            <close>true</close>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+          </dependencies>
+        </setting>
+        <setting id="go_back" type="action" label="32254" help="32301">
+          <level>0</level>
+          <data>RunScript($ID,back)</data>
+          <control type="button" format="action">
+            <close>false</close>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+          </dependencies>
+        </setting>
+      </group>
+      <group id="g_timer" label="32256">
+        <setting id="timer_id" type="integer" label="32256" help="">
+          <level>0</level>
+          <default>-1</default>
+          <control type="edit" format="integer">
+            <heading>32256</heading>
+          </control>
+          <visible>false</visible>
+        </setting>
+        <setting id="g_timer_hint" type="string" label="32193" help="">
+          <level>0</level>
+          <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>32193</heading>
+          </control>
+          <enable>false</enable>
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="is">-1</condition>
+                <condition setting="kodiVersion" operator="gt">2100</condition>
+              </and>
+            </dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_label" type="string" label="32026" help="32330">
+          <level>0</level>
+          <default>Timer 15</default>
+          <constraints>
+            <allowempty>false</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>32026</heading>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_priority" type="integer" label="32028" help="32336">
+          <level>3</level>
+          <default>0</default>
+          <constraints>
+            <minimum>-12</minimum>
+            <step>1</step>
+            <maximum>12</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_priority_hint_high" type="string" label="32337" help="">
+          <level>0</level>
+          <default />
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>32337</heading>
+          </control>
+          <enable>false</enable>
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="!is">-1</condition>
+                <condition setting="timer_priority" operator="gt">9</condition>
+              </and>
+            </dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_priority_hint_low" type="string" label="32338" help="">
+          <level>0</level>
+          <default />
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>32338</heading>
+          </control>
+          <enable>false</enable>
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="!is">-1</condition>
+                <condition setting="timer_priority" operator="lt">-9</condition>
+              </and>
+            </dependency>
+          </dependencies>
+        </setting>
+      </group>
+      <group id="g_timer_schedule" label="32060">
+        <setting id="g_timer_schedule_hint" type="string" label="32193" help="">
+          <level>0</level>
+          <default></default>
+          <control type="edit" format="string">
+            <heading>32193</heading>
+          </control>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <enable>false</enable>
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="is">-1</condition>
+                <condition setting="kodiVersion" operator="gt">2100</condition>
+              </and>
+            </dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_days" type="list[integer]" label="32037" help="32331">
+          <level>0</level>
+          <default></default>
+          <constraints>
+            <options>
+              <option label="32200">0</option>
+              <option label="32201">1</option>
+              <option label="32202">2</option>
+              <option label="32203">3</option>
+              <option label="32204">4</option>
+              <option label="32205">5</option>
+              <option label="32206">6</option>
+              <option label="32036">7</option>
+              <option label="32043">8</option>
+            </options>
+            <delimiter>|</delimiter>
+          </constraints>
+          <control type="list" format="string">
+            <multiselect>true</multiselect>
+            <hidevalue>false</hidevalue>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_date" type="date" label="32044" help="32388">
+          <level>0</level>
+          <default>1970-01-01</default>
+          <constraints>
+            <allowempty>false</allowempty>
+          </constraints>
+          <control type="button" format="date">
+            <heading>32043</heading>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+            <dependency type="visible" setting="timer_days" operator="is">8</dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_start" type="time" label="32061" help="32332">
+          <level>0</level>
+          <default>00:00</default>
+          <control type="button" format="time">
+            <heading>32061</heading>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+            <dependency type="enable" setting="timer_days" operator="!is"></dependency>
+            <dependency type="enable" setting="timer_days" operator="!is">7</dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_start_offset" type="integer" label="32066" help="32385">
+          <level>3</level>
+          <default>0</default>
+          <constraints>
+            <minimum>-59</minimum>
+            <step>1</step>
+            <maximum>59</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+            <dependency type="enable" setting="timer_days" operator="!is"></dependency>
+            <dependency type="enable" setting="timer_days" operator="!is">7</dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_end_type" type="integer" label="32062" help="32333">
+          <level>0</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="32063">0</option>
+              <option label="32064">1</option>
+              <option label="32065">2</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string" />
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+            <dependency type="enable" setting="timer_days" operator="!is"></dependency>
+            <dependency type="enable" setting="timer_days" operator="!is">7</dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_duration" type="time" label="32064" help="32335">
+          <level>0</level>
+          <default>01:00</default>
+          <control type="button" format="time">
+            <heading>32064</heading>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+            <dependency type="enable" setting="timer_days" operator="!is"></dependency>
+            <dependency type="enable" setting="timer_days" operator="!is">7</dependency>
+            <dependency type="visible" setting="timer_end_type" operator="is">1</dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_duration_offset" type="integer" label="32066" help="32385">
+          <level>3</level>
+          <default>0</default>
+          <constraints>
+            <minimum>-59</minimum>
+            <step>1</step>
+            <maximum>59</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+            <dependency type="enable" setting="timer_days" operator="!is"></dependency>
+            <dependency type="enable" setting="timer_days" operator="!is">7</dependency>
+            <dependency type="visible" setting="timer_end_type" operator="is">1</dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_end" type="time" label="32065" help="32334">
+          <level>0</level>
+          <default>00:00</default>
+          <control type="button" format="time">
+            <heading>32065</heading>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+            <dependency type="enable" setting="timer_days" operator="!is"></dependency>
+            <dependency type="enable" setting="timer_days" operator="!is">7</dependency>
+            <dependency type="visible" setting="timer_end_type" operator="is">2</dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_end_offset" type="integer" label="32066" help="32385">
+          <level>3</level>
+          <default>0</default>
+          <constraints>
+            <minimum>-59</minimum>
+            <step>1</step>
+            <maximum>59</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+            <dependency type="enable" setting="timer_days" operator="!is"></dependency>
+            <dependency type="enable" setting="timer_days" operator="!is">7</dependency>
+            <dependency type="visible" setting="timer_end_type" operator="is">2</dependency>
+          </dependencies>
+        </setting>
+      </group>
+      <group id="g_timer_action" label="32070">
+        <setting id="g_timer_action_hint" type="string" label="32193" help="">
+          <level>0</level>
+          <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>32193</heading>
+          </control>
+          <enable>false</enable>
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="is">-1</condition>
+                <condition setting="kodiVersion" operator="gt">2100</condition>
+              </and>
+            </dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_media_action" type="integer" label="32070" help="32340">
+          <level>0</level>
+          <default>2</default>
+          <constraints>
+            <options>
+              <option label="32071">0</option>
+              <option label="32072">1</option>
+              <option label="32073">2</option>
+              <option label="32074">3</option>
+              <option label="32075">4</option>
+              <option label="32076">5</option>
+              <option label="32077">6</option>
+              <option label="32089">7</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string" />
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_repeat" type="boolean" label="32078" help="32341">
+          <level>2</level>
+          <default>false</default>
+          <control type="toggle" />
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="!is">-1</condition>
+                <condition setting="timer_path" operator="!is"></condition>
+              </and>
+            </dependency>
+            <dependency type="enable">
+              <and>
+                <condition setting="timer_media_action" operator="gt">0</condition>
+                <condition setting="timer_media_action" operator="lt">5</condition>
+              </and>
+            </dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_shuffle" type="boolean" label="32088" help="32342">
+          <level>2</level>
+          <default>false</default>
+          <control type="toggle" />
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="!is">-1</condition>
+                <condition setting="timer_path" operator="!is"></condition>
+              </and>
+            </dependency>
+            <dependency type="enable">
+              <and>
+                <condition setting="timer_media_action" operator="gt">0</condition>
+                <condition setting="timer_media_action" operator="lt">5</condition>
+              </and>
+            </dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_resume" type="boolean" label="32079" help="32343">
+          <level>3</level>
+          <default>false</default>
+          <control type="toggle" />
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="!is">-1</condition>
+                <condition setting="timer_path" operator="!is"></condition>
+              </and>
+            </dependency>
+            <dependency type="enable" setting="timer_media_action" operator="is">1</dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_mediatype" type="string" label="32055" help="32387">
+          <level>3</level>
+          <default>video</default>
+          <constraints>
+            <options>
+              <option label="32056">audio</option>
+              <option label="32057">video</option>
+              <option label="32058">picture</option>
+              <option label="32059">script</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string" />
+          <dependencies>r
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="!is">-1</condition>
+                <condition setting="timer_path" operator="!is"></condition>
+              </and>
+            </dependency>
+            <dependency type="enable" setting="timer_path" operator="!is"></dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_path" type="string" label="32080" help="">
+          <level>3</level>
+          <default />
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>32080</heading>
+          </control>
+          <enable>false</enable>
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="!is">-1</condition>
+                <condition setting="timer_path" operator="!is"></condition>
+              </and>
+            </dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_hint" type="string" label="32114" help="">
+          <level>0</level>
+          <default />
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>32114</heading>
+          </control>
+          <enable>false</enable>
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="!is">-1</condition>
+                <condition setting="timer_path" operator="is"></condition>
+                <condition setting="timer_media_action" operator="gt">0</condition>
+                <condition setting="timer_media_action" operator="lt">5</condition>
+              </and>
+            </dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_test" type="action" label="32108" help="32344">
+          <level>2</level>
+          <data>RunScript($ID,play)</data>
+          <control type="button" format="action">
+            <close>true</close>
+          </control>
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="!is">-1</condition>
+                <condition setting="timer_path" operator="!is"></condition>
+              </and>
+            </dependency>
+            <dependency type="enable">
+              <and>
+                <condition setting="timer_path" operator="!is"></condition>
+                <condition setting="timer_media_action" operator="gt">0</condition>
+                <condition setting="timer_media_action" operator="lt">5</condition>
+              </and>
+            </dependency>
+          </dependencies>
+        </setting>
+      </group>
+      <group id="g_timer_fade" label="32090">
+        <setting id="g_timer_fade" type="string" label="32193" help="">
+          <level>0</level>
+          <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>32193</heading>
+          </control>
+          <enable>false</enable>
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="is">-1</condition>
+                <condition setting="kodiVersion" operator="gt">2100</condition>
+              </and>
+            </dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_fade" type="integer" label="32091" help="32350">
+          <level>1</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="32120">0</option>
+              <option label="32121">1</option>
+              <option label="32122">2</option>
+              <option label="32123">3</option>
+            </options>
+          </constraints>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+            <dependency type="enable" setting="timer_end_type" operator="!is">0</dependency>
+          </dependencies>
+          <control type="spinner" format="string" />
+        </setting>
+        <setting id="timer_vol_min" type="integer" label="32095" help="32351">
+          <level>1</level>
+          <default>75</default>
+          <constraints>
+            <minimum>0</minimum>
+            <step>1</step>
+            <maximum>100</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+            <dependency type="visible" setting="timer_fade" operator="!is">0</dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_vol_max" type="integer" label="32096" help="32352">
+          <level>1</level>
+          <default>100</default>
+          <constraints>
+            <minimum>0</minimum>
+            <step>1</step>
+            <maximum>100</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="!is">-1</condition>
+                <condition setting="timer_fade" operator="!is">0</condition>
+                <condition setting="timer_fade" operator="!is">3</condition>
+              </and>
+            </dependency>
+          </dependencies>
+        </setting>
+      </group>
+      <group id="g_timer_system_action" label="32081">
+        <setting id="timer_system_action_hint" type="string" label="32193" help="">
+          <level>0</level>
+          <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>32193</heading>
+          </control>
+          <enable>false</enable>
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="is">-1</condition>
+                <condition setting="kodiVersion" operator="gt">2100</condition>
+              </and>
+            </dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_system_action" type="integer" label="32087" help="32360">
+          <level>2</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="32071">0</option>
+              <option label="32082">1</option>
+              <option label="32083">2</option>
+              <option label="32094">7</option>
+              <option label="32084">3</option>
+              <option label="32085">4</option>
+              <option label="32086">5</option>
+              <option label="32099">8</option>
+              <option label="32093">6</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string" />
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+            <dependency type="enable" setting="timer_end_type" operator="!is">0</dependency>
+          </dependencies>
+        </setting>
+      </group>
+      <group id="g_timer_notify" label="32097">
+        <setting id="g_timer_notify_hint" type="string" label="32193" help="">
+          <level>0</level>
+          <default></default>
+          <constraints>
+            <allowempty>true</allowempty>
+          </constraints>
+          <control type="edit" format="string">
+            <heading>32193</heading>
+          </control>
+          <enable>false</enable>
+          <dependencies>
+            <dependency type="visible">
+              <and>
+                <condition setting="timer_id" operator="is">-1</condition>
+                <condition setting="kodiVersion" operator="gt">2100</condition>
+              </and>
+            </dependency>
+          </dependencies>
+        </setting>
+        <setting id="timer_notify" type="boolean" label="32098" help="32370">
+          <level>2</level>
+          <default>true</default>
+          <control type="toggle" />
+          <dependencies>
+            <dependency type="visible" setting="timer_id" operator="!is">-1</dependency>
+          </dependencies>
+        </setting>
+      </group>
+    </category>
+    <category id="c_pause" label="32001" help="">
+      <group id="g_pause" label="32160">
+        <setting id="setpause" type="action" label="32163" help="32300">
+          <level>2</level>
+          <data>RunScript($ID,set_pause)</data>
+          <control type="button" format="action">
+            <close>false</close>
+          </control>
+        </setting>
+        <setting id="resetpause" type="action" label="32164" help="32301">
+          <level>2</level>
+          <data>RunScript($ID,reset_pause)</data>
+          <control type="button" format="action">
+            <close>false</close>
+          </control>
+        </setting>
+      </group>
+      <group id="g_pause2" label="32168">
+        <setting id="pause_date_from" type="date" label="32161" help="32302">
+          <level>2</level>
+          <default>2001-01-01</default>
+          <control type="button" format="date">
+            <heading>32161</heading>
+          </control>
+        </setting>
+        <setting id="pause_time_from" type="time" label="32162" help="32303">
+          <level>2</level>
+          <default>00:01</default>
+          <control type="button" format="time">
+            <heading>32162</heading>
+          </control>
+        </setting>
+      </group>
+      <group id="g_pause3" label="32167">
+        <setting id="pause_date_until" type="date" label="32161" help="32302">
+          <level>2</level>
+          <default>2001-01-01</default>
+          <control type="button" format="date">
+            <heading>32161</heading>
+          </control>
+        </setting>
+        <setting id="pause_time_until" type="time" label="32162" help="32303">
+          <level>2</level>
+          <default>00:01</default>
+          <control type="button" format="time">
+            <heading>32162</heading>
+          </control>
+        </setting>
+      </group>
+    </category>
+    <category id="c_presets" label="32030" help="">
+      <group id="g_sleep_presets" label="32033">
+        <setting id="sleep_default_duration" type="time" label="32064" help="32335">
+          <level>1</level>
+          <default>01:00</default>
+          <control type="button" format="time">
+            <heading>32064</heading>
+          </control>
+        </setting>
+        <setting id="sleep_fade" type="integer" label="32091" help="32350">
+          <level>1</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="32120">0</option>
+              <option label="32122">2</option>
+              <option label="32123">3</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string" />
+        </setting>
+        <setting id="vol_min_default" type="integer" label="32095" help="32351">
+          <level>1</level>
+          <default>75</default>
+          <constraints>
+            <minimum>0</minimum>
+            <step>1</step>
+            <maximum>100</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+          <dependencies>
+            <dependency type="enable" setting="sleep_fade" operator="!is">0</dependency>
+          </dependencies>
+        </setting>
+        <setting id="sleep_system_action" type="integer" label="32087" help="32360">
+          <level>2</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="32071">0</option>
+              <option label="32082">1</option>
+              <option label="32083">2</option>
+              <option label="32084">3</option>
+              <option label="32085">4</option>
+              <option label="32086">5</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string" />
+        </setting>
+      </group>
+      <group id="g_snooze_presets" label="32038">
+        <setting id="snooze_default_duration" type="time" label="32064" help="32335">
+          <level>1</level>
+          <default>00:10</default>
+          <control type="button" format="time">
+            <heading>32064</heading>
+          </control>
+        </setting>
+      </group>
+      <group id="g_quicktimer_presets" label="32180">
+        <setting id="quicktimer_priority" type="integer" label="32028" help="32386">
+          <level>3</level>
+          <default>2</default>
+          <constraints>
+            <options>
+              <option label="32181">0</option>
+              <option label="32182">1</option>
+              <option label="32183">2</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string" />
+        </setting>
+      </group>
+    </category>
+    <category id="c_volume" label="32003" help="">
+      <group id="g_vol_default" label="32092">
+        <setting id="vol_default" type="integer" label="32092" help="32310">
+          <level>1</level>
+          <default>100</default>
+          <constraints>
+            <minimum>0</minimum>
+            <step>1</step>
+            <maximum>100</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="resetvol" type="action" label="32111" help="32311">
+          <level>1</level>
+          <data>RunScript($ID,reset_volume)</data>
+          <control type="button" format="action">
+            <close>false</close>
+          </control>
+        </setting>
+      </group>
+      <group id="g_resume" label="32079">
+        <setting id="resume" type="boolean" label="32113" help="32320">
+          <level>3</level>
+          <default>false</default>
+          <control type="toggle" />
+        </setting>
+      </group>
+      <group id="g_offset" label="32170">
+        <setting id="offset" type="integer" label="32171" help="32325">
+          <level>3</level>
+          <default>0</default>
+          <constraints>
+            <minimum>-59</minimum>
+            <step>1</step>
+            <maximum>59</maximum>
+          </constraints>
+          <control type="slider" format="integer">
+            <popup>false</popup>
+          </control>
+        </setting>
+        <setting id="onSettingChangeEvents" type="integer" label="32256" help="">
+          <level>3</level>
+          <default>0</default>
+          <control type="edit" format="integer">
+            <heading>32256</heading>
+          </control>
+          <visible>false</visible>
+        </setting>
+        <setting id="settingsVersion" type="integer" label="32256" help="">
+          <level>3</level>
+          <default>8</default>
+          <control type="edit" format="integer">
+            <heading>32256</heading>
+          </control>
+          <visible>false</visible>
+        </setting>
+        <setting id="kodiVersion" type="integer" label="32256" help="">
+          <level>3</level>
+          <default>20</default>
+          <control type="edit" format="integer">
+            <heading>32256</heading>
+          </control>
+          <visible>false</visible>
+        </setting>
+      </group>
+      <group id="g_database" label="32190">
+        <setting id="clean_outdated" type="boolean" label="32191" help="32192">
+          <level>3</level>
+          <default>true</default>
+          <control type="toggle" />
+        </setting>
+      </group>
+    </category>
+    <category id="c_extras" label="32002" help="">
+      <group id="g_extras" label="32002">
+        <setting id="powermanagement_displaysoff" type="integer" label="32130" help="32383">
+          <level>3</level>
+          <default>0</default>
+          <constraints>
+            <options>
+              <option label="32131">0</option>
+              <option label="32132">5</option>
+              <option label="32133">10</option>
+              <option label="32134">15</option>
+              <option label="32135">20</option>
+              <option label="32136">25</option>
+              <option label="32137">30</option>
+              <option label="32138">35</option>
+              <option label="32139">40</option>
+              <option label="32140">45</option>
+              <option label="32141">50</option>
+              <option label="32142">55</option>
+              <option label="32143">60</option>
+              <option label="32144">65</option>
+              <option label="32145">70</option>
+              <option label="32146">75</option>
+              <option label="32147">80</option>
+              <option label="32148">85</option>
+              <option label="32149">90</option>
+              <option label="32150">95</option>
+              <option label="32151">100</option>
+              <option label="32152">105</option>
+              <option label="32153">110</option>
+              <option label="32154">115</option>
+              <option label="32155">120</option>
+            </options>
+          </constraints>
+          <control type="spinner" format="string" />
+          <dependencies>
+            <dependency type="visible" on="property" operator="!is" name="infobool">system.isstandalone</dependency>
+          </dependencies>
+        </setting>
+        <setting id="audio_displaysoff" type="boolean" label="32031" help="32039">
+          <level>3</level>
+          <default>false</default>
+          <control type="toggle" />
+        </setting>
+        <setting id="windows_unlock" type="boolean" label="32032" help="32384">
+          <level>3</level>
+          <default>false</default>
+          <control type="toggle" />
+          <dependencies>
+            <dependency type="visible" on="property" operator="is" name="infobool">system.platform.windows</dependency>
+          </dependencies>
+        </setting>
+      </group>
+    </category>
+  </section>
+</settings>

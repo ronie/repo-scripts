@@ -1,0 +1,117 @@
+# Kodi Media Center language file
+# Addon Name: OzWeather
+# Addon id: weather.ozweather
+# Addon Provider: bossanova808
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: 2011-12-14 00:00+1000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-addons/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#32101"
+msgid "OzWeather Settings"
+msgstr ""
+
+msgctxt "#32151"
+msgid "Overrule Closest Radar ID for Location 1"
+msgstr ""
+
+msgctxt "#32152"
+msgid "Overrule Closest Radar ID for Location 2"
+msgstr ""
+
+msgctxt "#32153"
+msgid "Overrule Closest Radar ID for Location 3"
+msgstr ""
+
+msgctxt "#32154"
+msgid "Overrule Closest Radar ID for Location 4"
+msgstr ""
+
+msgctxt "#32155"
+msgid "Overrule Closest Radar ID for Location 5"
+msgstr ""
+
+msgctxt "#32156"
+msgid "Overrule Closest Radar ID for Location 6"
+msgstr ""
+
+msgctxt "#32194"
+msgid "Use extended features (longer forecast, radar loop, ABC weather video)"
+msgstr ""
+
+msgctxt "#32195"
+msgid "Enter suburb name, or your 4 digit postcode e.g. 3051"
+msgstr ""
+
+msgctxt "#32196"
+msgid "ABC Weather Video Quality Level"
+msgstr ""
+
+msgctxt "#32197"
+msgid "Periodically Update Radar Backgrounds?"
+msgstr ""
+
+msgctxt "#32200"
+msgid "BOM Locations"
+msgstr ""
+
+msgctxt "#32201"
+msgid "BOM Location 1"
+msgstr ""
+
+msgctxt "#32202"
+msgid "BOM Location 2"
+msgstr ""
+
+msgctxt "#32203"
+msgid "BOM Location 3"
+msgstr ""
+
+msgctxt "#32204"
+msgid "BOM Location 4"
+msgstr ""
+
+msgctxt "#32205"
+msgid "BOM Location 5"
+msgstr ""
+
+msgctxt "#32206"
+msgid "BOM Location 6"
+msgstr ""
+
+msgctxt "#32207"
+msgid "Extended Features"
+msgstr ""
+
+msgctxt "#32208"
+msgid "Enter postcode, suburb or area."
+msgstr ""
+
+msgctxt "#32209"
+msgid "Radar backgrounds not showing?  Try forcing a refresh"
+msgstr ""
+
+msgctxt "#32210"
+msgid "Refresh all radar backgrounds on next weather fetch?"
+msgstr ""
+
+msgctxt "#32211"
+msgid "Closest Radar "
+msgstr ""
+
+msgctxt "#32212"
+msgid "If entered, these radar codes overrule the closest found."
+msgstr ""
+
+msgctxt "#32213"
+msgid "Troubleshooting"
+msgstr ""

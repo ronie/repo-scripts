@@ -1,0 +1,36 @@
+v1.0.0
+- initial version
+
+v1.0.1
+- Added support for maps, text forecasts, hourly forecast etc
+
+v1.0.2
+- updated for Jarvis
+- Use forecast location as the displayed location
+- removed non responsive geoip providers
+- provided graceful fail for non-responsive geoip providers
+
+v2.0.0
+- updated for Krypton.
+- Fetch observation, daily and three hourly by default.
+- Update addon icons.
+
+v2.0.1
+- added sunrise sunset
+- added user agent to requests
+
+v3.0.0
+- updated for Matrix
+
+v4.0.0
+- Cleaned up memory leaks
+- Removed unused imaging code.
+- Removed default API key and nudged user to get their own.
+
+v4.1.0
+- Added feels like calculation.
+- Updated geoip providers.
+
+
+v4.1.1
+- Deprecated. See https://www.metoffice.gov.uk/services/data/datapoint/datapoint-retirement-faqs

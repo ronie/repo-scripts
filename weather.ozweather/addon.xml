@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="weather.ozweather" name="OzWeather" version="2.2.0" provider-name="Bossanova808">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+    	<import addon="script.module.requests" version="2.22.0+matrix.1"/>
+    	<import addon="script.module.beautifulsoup4" version="4.8.2+matrix.1"/>
+		<import addon="script.module.pytz" version="3.0+matrix.2"/>
+		<import addon="script.module.bossanova808" version="1.0.2"/>
+	</requires>
+	<extension point="xbmc.python.weather" library="default.py"/>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Weather forecasting and radar images for Australia using Bureau of Meteorology data</summary>
+		<description lang="en_GB">Weather forecasting and radar images for Australia using Bureau of Meteorology data.  For full features (animated radars &amp; ABC weather videos) - make sure you install the replacement skin files - see information at the addon wiki (https://kodi.wiki/index.php?title=Add-on:Oz_Weather).</description>
+		<disclaimer lang="en_GB">Use of this addon implies you agree to the following terms and conditions - https://reg.bom.gov.au/other/copyright.shtml and https://reg.bom.gov.au/other/disclaimer.shtml</disclaimer>
+		<platform>all</platform>
+		<language>en</language>
+		<license>GPL-3.0-only</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=116905</forum>
+		<website>https://kodi.wiki/index.php?title=Add-on:OzWeather</website>
+		<email>bossanova808@gmail.com</email>
+		<source>https://github.com/bossanova808/weather.ozweather</source>
+ 		<assets>
+       		<icon>icon.png</icon>
+       		<fanart>fanart.jpg</fanart>
+		</assets>
+		<news>v2.2.0
+- More robust fix for ABC weather video scraping due to upstream changes - explicitly find the weather video
+    	</news>
+	</extension>
+</addon>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <addon id="script.video.nfl.gamepass"
+    name="NFL Game Pass"
+    version="2023.07.05"
+    provider-name="Alexqw,divingmule,BaumSchorle,eriksoderblom,kaileu,emilsvennesson,baardisk,Duke">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0"/>
+    <import addon="script.module.m3u8" version="0.5.4+matrix.2"/>
+    <import addon="script.module.requests" version="2.22.0+matrix.1"/>
+    <import addon="inputstream.adaptive" version="19.0"/>
+  </requires>
+  <extension point="xbmc.python.script" library="default.py">
+    <provides>video</provides>
+  </extension>
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">NFL Game Pass</summary>
+    <description lang="en_GB">Watch NFL Game Pass streams.</description>
+    <lifecyclestate type="broken" lang="en_GB">The NFL canceled the NFL Gamepass service, rendering this add-on obsolete.</lifecyclestate>
+    <platform>all</platform>
+    <language>en</language>
+    <license>GPL-2.0-only</license>
+    <source>https://github.com/pigskin/kodi-gamepass</source>
+    <disclaimer lang="en_GB">The NFL canceled the NFL Gamepass service, rendering this add-on obsolete.</disclaimer>
+    <news>2023.07.05
+      + Mark add-on as broken, NFL has canceled the Gamepass service (jm-duke)
+      + Show date (or weekday) of game (AleXSR700)
+      + Toggle display of current week's games (jm-duke)
+      + Implement workaround for failed content URL retrieval (jm-duke)
+    </news>
+    <assets>
+      <icon>resources/art/icon.png</icon>
+      <fanart>resources/art/fanart.jpg</fanart>
+    </assets>
+  </extension>
+</addon>

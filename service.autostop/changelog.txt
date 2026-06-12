@@ -1,0 +1,61 @@
+1.0.6
+
+- Added option setting to reset sleep timer back to 0 after sleep 
+  timer stops playback.
+
+1.0.5
+
+- Added 300 and 600 second options for playback stop notification.
+- Added check to ensure both playback stop and notification timers 
+  aren't set to 10 minutes creating a logic loop and instant 
+  notification on playback start. 
+- Added Autostop addon icon to notification messages for easier
+  identification.
+
+1.0.4
+
+- Fixed a bug where the sleep timer could execute prematurely
+  when calling timer change via keyboard.xml or favourites.xml
+  due to playcount timer running when the sleep timer was set
+  to 0. 
+
+1.0.3
+
+-  Fixed exception bug when Kodi begins but is unable to play
+   a file properly.  Autostop will now ignore those playback
+   errors.
+
+1.0.2
+
+-  Extended sleep timer settings to 180 minutes
+-  Added pause sleep timer adjust option to select what
+   to do with the sleep timer when playback is paused.
+     None - Do nothing and sleep counter continues
+     Pause - Pause sleep timer
+     Reset - Reset sleep timer to beginning
+-  Added 0 -180 secs adjustable GUI sleep timer notification 
+   feature with fixed and adjustable sleep timer extension.
+-  Added event logging option to aid troubleshooting  
+
+1.0.1
+-  Fixed exception bug which could occur if Kodi stopped 
+   playing a file at exactly the same time the addon 
+   attempted to stop playback.
+
+1.0.0
+- Initial Matrix release
+
+0.0.1.3
+-  Increased sleep timer to 120 minutes maximum
+-  Added the ability to increment sleep timer value
+   by calling addon from favourites or keyboard.xml.
+   See the readme.txt file for an example.
+
+0.0.1.2
+-  Added autostopping playing music or video
+
+0.0.1.1:
+- Initial Alpha release for Kodi 19
+
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.oauthlib" name="oauthlib" version="3.2.2" provider-name="The OAuthlib Community">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+    <import addon="script.module.blinker" version="1.7.0" />
+    <import addon="script.module.pyjwt" version="2.8.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">A generic, spec-compliant, thorough implementation of the OAuth request-signing logic</summary>
+    <description lang="en_GB">A generic, spec-compliant, thorough implementation of the OAuth request-signing logic</description>
+    <license>BSD</license>
+    <platform>all</platform>
+    <website>https://github.com/oauthlib/oauthlib</website>
+    <source>https://github.com/oauthlib/oauthlib</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+    </assets>
+  </extension>
+</addon>

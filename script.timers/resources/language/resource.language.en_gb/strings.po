@@ -1,0 +1,882 @@
+# Kodi Media Center language file
+msgid ""
+msgstr ""
+"Project-Id-Version: Kodi Addons\n"
+"Report-Msgid-Bugs-To: alanwww1@kodi.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: English (http://www.transifex.com/projects/p/xbmc-addons/language/en/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: en\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgctxt "#32000"
+msgid "Timers"
+msgstr ""
+
+msgctxt "#32001"
+msgid "Pause"
+msgstr ""
+
+msgctxt "#32002"
+msgid "Extras"
+msgstr ""
+
+msgctxt "#32003"
+msgid "Misc"
+msgstr ""
+
+msgctxt "#32004"
+msgid "Sleep timer"
+msgstr ""
+
+msgctxt "#32005"
+msgid "Snooze timer"
+msgstr ""
+
+msgctxt "#32021"
+msgid "to"
+msgstr ""
+
+msgctxt "#32022"
+msgid "Cancel"
+msgstr ""
+
+msgctxt "#32023"
+msgid "Apply"
+msgstr ""
+
+msgctxt "#32024"
+msgid "until"
+msgstr ""
+
+msgctxt "#32025"
+msgid "%s at %s%s"
+msgstr ""
+
+msgctxt "#32026"
+msgid "Name"
+msgstr ""
+
+msgctxt "#32027"
+msgid "Timers"
+msgstr ""
+
+msgctxt "#32028"
+msgid "Priority"
+msgstr ""
+
+msgctxt "#32029"
+msgid "Timer deleted"
+msgstr ""
+
+msgctxt "#32030"
+msgid "Presets"
+msgstr ""
+
+msgctxt "#32031"
+msgid "Don't put display to sleep on audio playback"
+msgstr ""
+
+msgctxt "#32032"
+msgid "Prevent lock screen"
+msgstr ""
+
+msgctxt "#32033"
+msgid "Presets for sleep timer"
+msgstr ""
+
+msgctxt "#32034"
+msgid "off"
+msgstr ""
+
+msgctxt "#32035"
+msgid "every day"
+msgstr ""
+
+msgctxt "#32036"
+msgid "weekly"
+msgstr ""
+
+msgctxt "#32037"
+msgid "Days"
+msgstr ""
+
+msgctxt "#32038"
+msgid "Presets for snooze timer"
+msgstr ""
+
+msgctxt "#32039"
+msgid "Deactivate sleep display on audio playback"
+msgstr ""
+
+msgctxt "#32040"
+msgid "and"
+msgstr ""
+
+msgctxt "#32041"
+msgid "at"
+msgstr ""
+
+msgctxt "#32042"
+msgid "from"
+msgstr ""
+
+msgctxt "#32043"
+msgid "specific date"
+msgstr ""
+
+msgctxt "#32044"
+msgid "Date"
+msgstr ""
+
+msgctxt "#32050"
+msgid "This timer interrupts other timers"
+msgstr ""
+
+msgctxt "#32051"
+msgid "Other timers interrupt this timer"
+msgstr ""
+
+msgctxt "#32052"
+msgid "Is %s more important?"
+msgstr ""
+
+msgctxt "#32055"
+msgid "Mediatype"
+msgstr ""
+
+msgctxt "#32056"
+msgid "audio"
+msgstr ""
+
+msgctxt "#32057"
+msgid "video"
+msgstr ""
+
+msgctxt "#32058"
+msgid "picture"
+msgstr ""
+
+msgctxt "#32059"
+msgid "script"
+msgstr ""
+
+msgctxt "#32060"
+msgid "Schedule"
+msgstr ""
+
+msgctxt "#32061"
+msgid "Start time"
+msgstr ""
+
+msgctxt "#32062"
+msgid "End after"
+msgstr ""
+
+msgctxt "#32063"
+msgid "No end"
+msgstr ""
+
+msgctxt "#32064"
+msgid "Duration"
+msgstr ""
+
+msgctxt "#32065"
+msgid "Time"
+msgstr ""
+
+msgctxt "#32066"
+msgid "+/- seconds"
+msgstr ""
+
+msgctxt "#32070"
+msgid "Media action"
+msgstr ""
+
+msgctxt "#32071"
+msgid "none"
+msgstr ""
+
+msgctxt "#32072"
+msgid "play at start and stop at end"
+msgstr ""
+
+msgctxt "#32073"
+msgid "play at start"
+msgstr ""
+
+msgctxt "#32074"
+msgid "play at end"
+msgstr ""
+
+msgctxt "#32075"
+msgid "stop at start and play at end"
+msgstr ""
+
+msgctxt "#32076"
+msgid "stop at start"
+msgstr ""
+
+msgctxt "#32077"
+msgid "stop at end"
+msgstr ""
+
+msgctxt "#32078"
+msgid "Repeat"
+msgstr ""
+
+msgctxt "#32079"
+msgid "Resume"
+msgstr ""
+
+msgctxt "#32080"
+msgid "Media"
+msgstr ""
+
+msgctxt "#32081"
+msgid "System action"
+msgstr ""
+
+msgctxt "#32082"
+msgid "shutdown Kodi"
+msgstr ""
+
+msgctxt "#32083"
+msgid "quit Kodi"
+msgstr ""
+
+msgctxt "#32084"
+msgid "suspend system"
+msgstr ""
+
+msgctxt "#32085"
+msgid "hibernate system"
+msgstr ""
+
+msgctxt "#32086"
+msgid "powerdown system"
+msgstr ""
+
+msgctxt "#32087"
+msgid "System action at end"
+msgstr ""
+
+msgctxt "#32088"
+msgid "Shuffle"
+msgstr ""
+
+msgctxt "#32089"
+msgid "pause at start and resume at end"
+msgstr ""
+
+msgctxt "#32090"
+msgid "Volume"
+msgstr ""
+
+msgctxt "#32091"
+msgid "Fading"
+msgstr ""
+
+msgctxt "#32092"
+msgid "Default volume"
+msgstr ""
+
+msgctxt "#32093"
+msgid "Standby TV via CEC"
+msgstr ""
+
+msgctxt "#32094"
+msgid "Restart Kodi"
+msgstr ""
+
+msgctxt "#32095"
+msgid "Low volume"
+msgstr ""
+
+msgctxt "#32096"
+msgid "High volume"
+msgstr ""
+
+msgctxt "#32097"
+msgid "Notifications"
+msgstr ""
+
+msgctxt "#32098"
+msgid "Timer Notifications"
+msgstr ""
+
+msgctxt "#32099"
+msgid "Reboot system"
+msgstr ""
+
+msgctxt "#32100"
+msgid "Timer starts"
+msgstr ""
+
+msgctxt "#32101"
+msgid "Timer ended"
+msgstr ""
+
+msgctxt "#32102"
+msgid "Open settings"
+msgstr ""
+
+msgctxt "#32103"
+msgid "Select timer"
+msgstr ""
+
+msgctxt "#32104"
+msgid "Select days"
+msgstr ""
+
+msgctxt "#32105"
+msgid "Enter start time"
+msgstr ""
+
+msgctxt "#32106"
+msgid "Enter duration"
+msgstr ""
+
+msgctxt "#32107"
+msgid "Confirm timer"
+msgstr ""
+
+msgctxt "#32108"
+msgid "Play now"
+msgstr ""
+
+msgctxt "#32109"
+msgid "Media not set. Nothing to play."
+msgstr ""
+
+msgctxt "#32111"
+msgid "Reset volume"
+msgstr ""
+
+msgctxt "#32112"
+msgid "Reset volume done"
+msgstr ""
+
+msgctxt "#32113"
+msgid "Seek to correct time if timer starts belatedly"
+msgstr ""
+
+msgctxt "#32114"
+msgid "Select media and set timer via context menu first."
+msgstr ""
+
+msgctxt "#32117"
+msgid "Quick Timer"
+msgstr ""
+
+msgctxt "#32118"
+msgid "Selected item is not supported. Would you like to open settings?"
+msgstr ""
+
+msgctxt "#32120"
+msgid "off"
+msgstr ""
+
+msgctxt "#32121"
+msgid "fade in from low"
+msgstr ""
+
+msgctxt "#32122"
+msgid "fade out from high"
+msgstr ""
+
+msgctxt "#32123"
+msgid "fade out from current"
+msgstr ""
+
+msgctxt "#32130"
+msgid "Put display only in fullscreen mode to sleep"
+msgstr ""
+
+msgctxt "#32131"
+msgid "acc. system setting"
+msgstr ""
+
+msgctxt "#32132"
+msgid "5 min"
+msgstr ""
+
+msgctxt "#32133"
+msgid "10 min"
+msgstr ""
+
+msgctxt "#32134"
+msgid "15 min"
+msgstr ""
+
+msgctxt "#32135"
+msgid "20 min"
+msgstr ""
+
+msgctxt "#32136"
+msgid "25 min"
+msgstr ""
+
+msgctxt "#32137"
+msgid "30 min"
+msgstr ""
+
+msgctxt "#32138"
+msgid "35 min"
+msgstr ""
+
+msgctxt "#32139"
+msgid "40 min"
+msgstr ""
+
+msgctxt "#32140"
+msgid "45 min"
+msgstr ""
+
+msgctxt "#32141"
+msgid "50 min"
+msgstr ""
+
+msgctxt "#32142"
+msgid "55 min"
+msgstr ""
+
+msgctxt "#32143"
+msgid "60 min"
+msgstr ""
+
+msgctxt "#32144"
+msgid "65 min"
+msgstr ""
+
+msgctxt "#32145"
+msgid "70 min"
+msgstr ""
+
+msgctxt "#32146"
+msgid "75 min"
+msgstr ""
+
+msgctxt "#32147"
+msgid "80 min"
+msgstr ""
+
+msgctxt "#32148"
+msgid "85 min"
+msgstr ""
+
+msgctxt "#32149"
+msgid "90 min"
+msgstr ""
+
+msgctxt "#32150"
+msgid "95 min"
+msgstr ""
+
+msgctxt "#32151"
+msgid "100 min"
+msgstr ""
+
+msgctxt "#32152"
+msgid "105 min"
+msgstr ""
+
+msgctxt "#32153"
+msgid "110 min"
+msgstr ""
+
+msgctxt "#32154"
+msgid "115 min"
+msgstr ""
+
+msgctxt "#32155"
+msgid "120 min"
+msgstr ""
+
+msgctxt "#32160"
+msgid "Pause timers"
+msgstr ""
+
+msgctxt "#32161"
+msgid "Date"
+msgstr ""
+
+msgctxt "#32162"
+msgid "Time"
+msgstr ""
+
+msgctxt "#32163"
+msgid "Set pause for ..."
+msgstr ""
+
+msgctxt "#32164"
+msgid "Reset Pause"
+msgstr ""
+
+msgctxt "#32165"
+msgid "Pause until %s"
+msgstr ""
+
+msgctxt "#32166"
+msgid "Pause ended"
+msgstr ""
+
+msgctxt "#32167"
+msgid "Pause until"
+msgstr ""
+
+msgctxt "#32168"
+msgid "Pause from"
+msgstr ""
+
+msgctxt "#32170"
+msgid "Real-time clock"
+msgstr ""
+
+msgctxt "#32171"
+msgid "Offset for real-time clock in seconds"
+msgstr ""
+
+msgctxt "#32180"
+msgid "Presets for epg quick timer"
+msgstr ""
+
+msgctxt "#32181"
+msgid "don't interrupt existing timers"
+msgstr ""
+
+msgctxt "#32182"
+msgid "latest added timer"
+msgstr ""
+
+msgctxt "#32183"
+msgid "always ask"
+msgstr ""
+
+msgctxt "#32190"
+msgid "Housekeeping"
+msgstr ""
+
+msgctxt "#32191"
+msgid "Cleanup missed timers at startup"
+msgstr ""
+
+msgctxt "#32192"
+msgid "Cleanup missed timers when Kodi starts. This can happen if Kodi was not running when timer has been scheduled."
+msgstr ""
+
+msgctxt "#32193"
+msgid ""
+msgstr ""
+
+msgctxt "#32200"
+msgid "Monday"
+msgstr ""
+
+msgctxt "#32201"
+msgid "Tuesday"
+msgstr ""
+
+msgctxt "#32202"
+msgid "Wednesday"
+msgstr ""
+
+msgctxt "#32203"
+msgid "Thursday"
+msgstr ""
+
+msgctxt "#32204"
+msgid "Friday"
+msgstr ""
+
+msgctxt "#32205"
+msgid "Saturday"
+msgstr ""
+
+msgctxt "#32206"
+msgid "Sunday"
+msgstr ""
+
+msgctxt "#32210"
+msgid "Mondays"
+msgstr ""
+
+msgctxt "#32211"
+msgid "Tuedays"
+msgstr ""
+
+msgctxt "#32212"
+msgid "Wednesdays"
+msgstr ""
+
+msgctxt "#32213"
+msgid "Thursdays"
+msgstr ""
+
+msgctxt "#32214"
+msgid "Fridays"
+msgstr ""
+
+msgctxt "#32215"
+msgid "Saturdays"
+msgstr ""
+
+msgctxt "#32216"
+msgid "Sundays"
+msgstr ""
+
+msgctxt "#32250"
+msgid "Add timer"
+msgstr ""
+
+msgctxt "#32251"
+msgid "View / Edit timer ..."
+msgstr ""
+
+msgctxt "#32252"
+msgid "Remove timer ..."
+msgstr ""
+
+msgctxt "#32253"
+msgid "Save changes"
+msgstr ""
+
+msgctxt "#32254"
+msgid "Back"
+msgstr ""
+
+msgctxt "#32255"
+msgid "Edit timer"
+msgstr ""
+
+msgctxt "#32256"
+msgid "Timer"
+msgstr ""
+
+msgctxt "#32257"
+msgid "New timer"
+msgstr ""
+
+msgctxt "#32258"
+msgid "No timers to select."
+msgstr ""
+
+msgctxt "#32260"
+msgid "This item is already scheduled"
+msgstr ""
+
+msgctxt "#32261"
+msgid "What do you want to do with existing timer?"
+msgstr ""
+
+msgctxt "#32262"
+msgid "Delete"
+msgstr ""
+
+msgctxt "#32263"
+msgid "Replace"
+msgstr ""
+
+msgctxt "#32270"
+msgid "Timer is ending with system action:"
+msgstr ""
+
+msgctxt "#32271"
+msgid "Do you want to skip system action?"
+msgstr ""
+
+msgctxt "#32272"
+msgid "Continue"
+msgstr ""
+
+msgctxt "#32273"
+msgid "Skip"
+msgstr ""
+
+msgctxt "#32280"
+msgid "start playback"
+msgstr ""
+
+msgctxt "#32281"
+msgid "stop playback"
+msgstr ""
+
+msgctxt "#32282"
+msgid "pause playback"
+msgstr ""
+
+msgctxt "#32283"
+msgid "continue playback"
+msgstr ""
+
+msgctxt "#32284"
+msgid "start fader"
+msgstr ""
+
+msgctxt "#32285"
+msgid "end fader"
+msgstr ""
+
+msgctxt "#32286"
+msgid "start slideshow"
+msgstr ""
+
+msgctxt "#32287"
+msgid "end slideshow"
+msgstr ""
+
+msgctxt "#32288"
+msgid "run addon"
+msgstr ""
+
+msgctxt "#32289"
+msgid "interrupt running timers"
+msgstr ""
+
+msgctxt "#32300"
+msgid "Opens a dialog where you can enter a duration for pause from now."
+msgstr ""
+
+msgctxt "#32301"
+msgid "Ends the pause period by setting date and time in the past."
+msgstr ""
+
+msgctxt "#32302"
+msgid "Date until the timer is paused."
+msgstr ""
+
+msgctxt "#32303"
+msgid "Time until the timer is paused."
+msgstr ""
+
+msgctxt "#32310"
+msgid "Default volume that is set after fading timer has endet or by pressing 'reset volume'."
+msgstr ""
+
+msgctxt "#32311"
+msgid "Set default volume now."
+msgstr ""
+
+msgctxt "#32320"
+msgid "If a media playing timer starts late since Kodi was not running or timers were paused, the scheduler seeks to position of playlist that would have been already played if timer has started in time."
+msgstr ""
+
+msgctxt "#32325"
+msgid "Set an offset in order to perform timers ahead of time (< 0) or later in time (> 0)."
+msgstr ""
+
+msgctxt "#32330"
+msgid "Display name of the timer that is displayed in notifications and context menu."
+msgstr ""
+
+msgctxt "#32331"
+msgid "Select one or more days in order to scheduler the timer. If you select 'weekly' the timer is repeated every week."
+msgstr ""
+
+msgctxt "#32332"
+msgid "Enter the starting time of the timer."
+msgstr ""
+
+msgctxt "#32333"
+msgid "Select if the timer stops after a specific time, after a given duration or has no end."
+msgstr ""
+
+msgctxt "#32334"
+msgid "Enter the ending time of the timer."
+msgstr ""
+
+msgctxt "#32335"
+msgid "Enter the duration after the timer ends."
+msgstr ""
+
+msgctxt "#32336"
+msgid "Set value if this timer is more important than other. Higher value means more important. Values starting from 10 always win against new timers."
+msgstr ""
+
+msgctxt "#32337"
+msgid "This is a overruling timer with high priority."
+msgstr ""
+
+msgctxt "#32338"
+msgid "This is a obsequiously timer with low priority."
+msgstr ""
+
+msgctxt "#32340"
+msgid "Select the media action of the timer. Note that you must add a media to the timer by utilizing the context menu first."
+msgstr ""
+
+msgctxt "#32341"
+msgid "If activated the media item or playlist is repeated by setting the 'repeat all' option of the player."
+msgstr ""
+
+msgctxt "#32342"
+msgid "If activated the playlist is shuffeled by setting the 'shuffle' option of the player."
+msgstr ""
+
+msgctxt "#32343"
+msgid "If activated the timer resumes the media that was interupted when the timer has started."
+msgstr ""
+
+msgctxt "#32344"
+msgid "Play media of the timer now in order to test it."
+msgstr ""
+
+msgctxt "#32350"
+msgid "Fade in or fade out volume in period of timer."
+msgstr ""
+
+msgctxt "#32351"
+msgid "Low volume of fading timer."
+msgstr ""
+
+msgctxt "#32352"
+msgid "High volume of fading timer."
+msgstr ""
+
+msgctxt "#32360"
+msgid "System action that is performed after timer has finished."
+msgstr ""
+
+msgctxt "#32370"
+msgid "Display notifications when timer starts and ends."
+msgstr ""
+
+msgctxt "#32380"
+msgid "Click here in order to add a new timer. Note that media timer must be configured via context menu."
+msgstr ""
+
+msgctxt "#32381"
+msgid "Click here in order to display and edit an existing timer."
+msgstr ""
+
+msgctxt "#32382"
+msgid "Click here in order to delete an existing timer."
+msgstr ""
+
+msgctxt "#32383"
+msgid "Deactivate sleep display in window mode"
+msgstr ""
+
+msgctxt "#32384"
+msgid "Prevent lookscreen in MS Windows while Kodi is running"
+msgstr ""
+
+msgctxt "#32385"
+msgid "Optionally you can set an offset in seconds."
+msgstr ""
+
+msgctxt "#32386"
+msgid "Determine the strategy for priority of new quicktimers."
+msgstr ""
+
+msgctxt "#32387"
+msgid "Mediatype is normally determined automatically. Set type manually e.g. if resuming doesn't work as expected."
+msgstr ""
+
+msgctxt "#32388"
+msgid "Schedule this timer with full date and not only by day within one week."
+msgstr ""

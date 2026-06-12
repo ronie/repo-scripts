@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.wellbeing" name="Wellbeing" version="1.3.2" provider-name="Heckie">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension point="xbmc.service" library="addon.py" />
+  <extension point="xbmc.python.script" library="script.py" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">Wellbeing</summary>
+    <summary lang="de_DE">Wellbeing</summary>
+    <summary lang="sv_SE">Välbefinnande</summary>
+    <summary lang="sk_SK">Duševná pohoda</summary>
+    <description lang="en_GB">Addon in order to limit playback time per day, e.g. for parental control. After playback time has been reached playback will be stopped automatically.
+    </description>
+    <description lang="de_DE">Addon um Wiedergabezeit pro Tag zu begrenzen. Nachdem die Wiederabezeit erreicht ist, beendet das Addon die Wiedergabe automatisch.
+    </description>
+    <description lang="sv_SE">Tillägg för att begränsa uppspelningstiden per dag, t.ex. för föräldrakontroll. När uppspelningstiden har nåtts stoppas uppspelningen automatiskt.
+    </description>
+    <description lang="sk_SK">Doplnok na obmedzenie času prehrávania za deň, napríklad na rodičovskú kontrolu. Po dosiahnutí časového limitu sa prehrávanie automaticky zastaví.
+    </description>
+    <language>en</language>
+    <language>de</language>
+    <platform>all</platform>
+    <license>MIT</license>
+    <website>https://github.com/Heckie75/kodi-addon-wellbeing</website>
+    <source>https://github.com/Heckie75/kodi-addon-wellbeing</source>
+    <news>
+Version 1.3.2 (2026-01-06)
+- Bugfix issue #8: Video Playback Limit Always 24:00
+
+Version 1.3.1 (2025-09-22)
+- Added translations for Swedish and Slovak language
+
+Version 1.3.0 (2025-09-21)
+- Added action in settings and RPC call to reset time budget (action=reset)
+- Added action in settings and RPC call to set today's time budget (action=limit, limit=1:00)
+
+Version 1.2.0 (2022-11-30)
+- Added new feature: auto-stop in rest period
+- Added help texts
+- Refactoring
+
+Version 1.1.0 (2022-08-27)
+- Added hourly notifications incl. new setting
+- Correct handling of paused media so that it doesn't consume time budget anymore
+
+Version 1.0.0 (2022-04-20)
+- Initial version
+    </news>
+    <assets>
+      <icon>resources/assets/icon.png</icon>
+      <fanart>resources/assets/fanart.png</fanart>
+      <screenshot>resources/assets/screenshot_01.png</screenshot>
+      <screenshot>resources/assets/screenshot_02.png</screenshot>
+      <screenshot>resources/assets/screenshot_03.png</screenshot>
+      <screenshot>resources/assets/screenshot_04.png</screenshot>
+      <screenshot>resources/assets/screenshot_05.png</screenshot>
+    </assets>
+  </extension>
+</addon>

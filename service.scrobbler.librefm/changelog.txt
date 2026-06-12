@@ -1,0 +1,55 @@
+v4.0.4
+- v19 update
+
+v4.0.3
+- cosmetics
+
+v4.0.2
+- move icon to resources
+
+v4.0.1
+- bump
+
+v4.0.0
+- changes for python 3
+
+v3.0.1
+- krypton bump
+
+v2.0.5
+- move repo to gitlab
+
+v2.0.4
+- lanuage update
+- cosmetics
+
+v2.0.3
+- update language files from Transifex
+
+v2.0.2
+- update language files from Transifex
+- better support for streaming radio
+
+v2.0.1
+- use Monitor.abortRequested()
+
+v2.0.0
+- kodi name change
+
+v1.0.2
+- update language
+
+v1.0.1
+- update language
+
+v1.0.0
+- gotham release
+
+v0.0.3
+- update language files
+
+v0.0.2
+- add forum thread to addon.xml
+
+v0.0.1
+- initial release

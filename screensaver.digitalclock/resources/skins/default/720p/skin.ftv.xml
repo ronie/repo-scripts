@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="window">
+	<backgroundcolor>0xffff00ff</backgroundcolor>
+	<controls>
+		<control type="image" id="30020">
+			<visible>false</visible>
+		</control>
+		<control type="image" id="30022">
+			<visible>false</visible>
+		</control>
+		<!-- Background -->
+		<control type="image">
+			<include>FullscreenDimensions</include>
+			<texture>special://skin/media/common/background_default.png</texture>
+		</control>
+		<control type="group" id="30023">
+			<visible>false</visible>
+		</control>
+		<control type="group" id="30002">
+			<description>Clock and Date</description>
+			<animation effect="zoom" end="110" center="auto" time="" condition="String.IsEqual(Window(12900).Property(zoomamount),110)">WindowOpen</animation>
+			<animation effect="zoom" end="120" center="auto" time="" condition="String.IsEqual(Window(12900).Property(zoomamount),120)">WindowOpen</animation>
+			<animation effect="zoom" end="130" center="auto" time="" condition="String.IsEqual(Window(12900).Property(zoomamount),130)">WindowOpen</animation>
+			<animation effect="zoom" end="140" center="auto" time="" condition="String.IsEqual(Window(12900).Property(zoomamount),140)">WindowOpen</animation>
+			<animation effect="zoom" end="150" center="auto" time="" condition="String.IsEqual(Window(12900).Property(zoomamount),150)">WindowOpen</animation>
+			<animation effect="zoom" end="160" center="auto" time="" condition="String.IsEqual(Window(12900).Property(zoomamount),160)">WindowOpen</animation>
+			<animation effect="zoom" end="170" center="auto" time="" condition="String.IsEqual(Window(12900).Property(zoomamount),170)">WindowOpen</animation>
+			<animation effect="zoom" end="180" center="auto" time="" condition="String.IsEqual(Window(12900).Property(zoomamount),180)">WindowOpen</animation>
+			<animation effect="zoom" end="190" center="auto" time="" condition="String.IsEqual(Window(12900).Property(zoomamount),190)">WindowOpen</animation>
+			<animation effect="zoom" end="200" center="auto" time="" condition="String.IsEqual(Window(12900).Property(zoomamount),200)">WindowOpen</animation>
+			<posx>460</posx>
+			<posy>290</posy>
+			<width>360</width>
+			<height>280</height>
+			<visible>true</visible>
+			<!-- Background diffuse -->
+			<control type="image">
+				<left>-50</left>
+				<top>-100</top>
+				<width>460</width>
+				<height>460</height>
+				<texture>special://skin/media/common/clock_background.png</texture>
+				<aspectratio align="center">stretch</aspectratio>
+			</control>
+			<!-- Time -->
+			<control type="grouplist">
+				<width>360</width>
+				<height>280</height>
+				<align>center</align>
+				<itemgap>0</itemgap>
+				<orientation>horizontal</orientation>
+				<usecontrolcoords>true</usecontrolcoords>
+				<animation effect="slide" time="0" end="0,60" condition="!Control.IsVisible(30110)">Conditional</animation>
+				<control type="label" id="30101">
+					<width>auto</width>
+					<height>99</height>
+					<font>Light148</font>
+					<textcolor>ffbfbcbb</textcolor>
+				</control>
+				<control type="group">
+					<width>27</width>
+					<height>99</height>
+					<visible>Control.IsVisible(30102)</visible>
+					<control type="label">
+						<top>28</top>
+						<width>27</width>
+						<height>13</height>
+						<label>·</label>
+						<font>Light80</font>
+						<align>center</align>
+						<textcolor>ffbfbcbb</textcolor>
+					</control>
+					<control type="label">
+						<top>64</top>
+						<width>27</width>
+						<height>13</height>
+						<label>·</label>
+						<font>Light80</font>
+						<align>center</align>
+						<textcolor>ffbfbcbb</textcolor>
+					</control>
+				</control>
+				<control type="group">
+					<width>27</width>
+					<height>99</height>
+					<visible>!Control.IsVisible(30102)</visible>
+					<control type="label">
+						<top>28</top>
+						<width>27</width>
+						<height>13</height>
+						<label>·</label>
+						<font>Light80</font>
+						<align>center</align>
+						<textcolor>88bfbcbb</textcolor>
+					</control>
+					<control type="label">
+						<top>64</top>
+						<width>27</width>
+						<height>13</height>
+						<label>·</label>
+						<font>Light80</font>
+						<align>center</align>
+						<textcolor>88bfbcbb</textcolor>
+					</control>
+				</control>
+				<control type="label" id="30103">
+					<width>auto</width>
+					<height>99</height>
+					<font>Light148</font>
+					<textcolor>ffbfbcbb</textcolor>
+				</control>
+				<control type="label" id="30104">
+					<top>53</top>
+					<width>auto</width>
+					<height>39</height>
+					<font>Med58</font>
+					<textcolor>ffbfbcbb</textcolor>
+				</control>
+			</control>
+			<!-- Date -->
+			<control type="label" id="30100">
+				<top>96</top>
+				<width>360</width>
+				<height>35</height>
+				<align>center</align>
+				<font>Reg36Spaced</font>
+				<textcolor>ffbfbcbb</textcolor>
+				<animation effect="slide" time="0" end="0,60" condition="!Control.IsVisible(30110)">Conditional</animation>
+			</control>
+			<!-- Information -->
+			<control type="label" id="30110">
+				<top>134</top>
+				<width>360</width>
+				<height>30</height>
+				<align>center</align>
+				<font>Reg30Spaced</font>
+				<textcolor>ffbfbcbb</textcolor>
+			</control>
+			<!-- Weather icon -->
+			<control type="image" id="30021">
+				<posx>120</posx>
+				<posy>160</posy>
+				<width>120</width>
+				<height>120</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<aspectratio>keep</aspectratio>
+				<visible>true</visible>
+				<texture colordiffuse="ffbfbcbb"/>
+			</control>
+			<control type="label" id="30102">
+				<description>Colon</description>
+				<textcolor>00ffffff</textcolor>
+				<shadowcolor>00ffffff</shadowcolor>
+			</control>
+			<control type="label" id="30105">
+				<visible>false</visible>
+			</control>
+			<control type="label" id="30106">
+				<visible>false</visible>
+			</control>
+			<control type="label" id="30107">
+				<visible>false</visible>
+			</control>
+			<control type="label" id="30108">
+				<visible>false</visible>
+			</control>
+			<control type="label" id="30109">
+				<visible>false</visible>
+			</control>
+			<control type="label" id="30111">
+				<visible>false</visible>
+			</control>
+			<control type="label" id="30112">
+				<visible>false</visible>
+			</control>
+		</control>
+	</controls>
+</window>

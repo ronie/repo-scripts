@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.twitter" name="Twitter" version="1.18.0+matrix.2" provider-name="Mike Verdone">
+  <requires>
+    <import addon="xbmc.python" version="3.0.0" />
+  </requires>
+  <extension point="xbmc.python.module" library="lib" />
+  <extension point="xbmc.addon.metadata">
+    <platform>all</platform>
+    <summary lang="en_GB">An API and command-line toolset for Twitter (twitter.com)</summary>
+    <description lang="en_GB">An API and command-line toolset for Twitter (twitter.com)</description>
+    <source>https://pypi.org/project/twitter/1.17.1</source>
+    <website>https://mike.verdone.ca/twitter</website>
+    <platform>all</platform>
+    <license>MIT</license>
+    <assets>
+      <icon>icon.png</icon>
+    </assets>
+  </extension>
+</addon>
